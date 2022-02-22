@@ -33,12 +33,6 @@ $(document).ready(function () {
 
   // count-number
 
-  $(".counter").counterUp({
-    time: 2000,
-  });
-  $(".number-count").counterUp({
-    time: 1000,
-  });
 
   // dropify
 
