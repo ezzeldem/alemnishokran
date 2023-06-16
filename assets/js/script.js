@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  $(window).load(function () {
+    $(".loding_page").fadeOut();
+  });
+});
+
+$(document).ready(function () {
   //  fixed menu on scroll for desktop
   // if ($(window).width() > 992) {
   //     $(window).scroll(function () {
@@ -13,15 +19,6 @@ $(document).ready(function () {
 
   // scrole to section
 
-
-  $(document).ready(function(){
-    $(window).load(function () {
-        $(".loding_page").fadeOut();
-    });
-});
-
-
-
   $(window).scroll(function () {
     $(".section-scrol").each(function () {
       if ($(window).scrollTop() > $(this).offset().top - 400) {
@@ -32,50 +29,6 @@ $(document).ready(function () {
   });
 
   // count-number
-
-
-  // dropify
-
-  $(".dropify").dropify();
-
-  // niceSelect
-  $(".selectS").select2();
-
-  $(".search-none1").select2({
-    minimumResultsForSearch: Infinity,
-  });
-  // "<span><img src='https://www.countryflags.io/EG/flat/24.png' class='img-fluid'></span>"
-
-  $(".cuntery-selctor").select2({
-    templateResult: function (state) {
-      if (!state.id) {
-        return state.text;
-      }
-
-      var $span = $(
-        "<span><img src='https://www.countryflags.io/" +
-          state.element.id +
-          "/flat/24.png'/> " +
-          state.text +
-          "</span>"
-      );
-      return $span;
-    },
-    templateSelection: function (state) {
-      if (!state.id) {
-        return state.text;
-      }
-
-      var $span = $(
-        "<span><img src='https://www.countryflags.io/" +
-          state.element.id +
-          "/flat/24.png'/> " +
-          state.text +
-          "</span>"
-      );
-      return $span;
-    },
-  });
 
   function formatState(state) {
     if (!state.id) {
@@ -118,7 +71,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     rtl: true,
     dots: true,
     adaptiveHeight: true,
@@ -131,7 +84,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     rtl: true,
     dots: true,
     adaptiveHeight: true,
@@ -162,7 +115,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     rtl: true,
     dots: true,
     adaptiveHeight: true,
@@ -197,7 +150,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     rtl: true,
     dots: true,
     adaptiveHeight: true,
@@ -211,7 +164,7 @@ $(document).ready(function () {
     slidesToShow: 9,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     rtl: true,
     adaptiveHeight: true,
     autoplaySpeed: 1700,
@@ -231,5 +184,47 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+  // dropify
+
+  $(".dropify").dropify();
+
+  // niceSelect
+  $(".selectS").select2();
+
+  $(".search-none1").select2({
+    minimumResultsForSearch: Infinity,
+  });
+  // "<span><img src='https://www.countryflags.io/EG/flat/24.png' class='img-fluid'></span>"
+
+  $(".cuntery-selctor").select2({
+    templateResult: function (state) {
+      if (!state.id) {
+        return state.text;
+      }
+
+      var $span = $(
+        "<span><img src='https://www.countryflags.io/" +
+          state.element.id +
+          "/flat/24.png'/> " +
+          state.text +
+          "</span>"
+      );
+      return $span;
+    },
+    templateSelection: function (state) {
+      if (!state.id) {
+        return state.text;
+      }
+
+      var $span = $(
+        "<span><img src='https://www.countryflags.io/" +
+          state.element.id +
+          "/flat/24.png'/> " +
+          state.text +
+          "</span>"
+      );
+      return $span;
+    },
   });
 });
